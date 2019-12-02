@@ -5,6 +5,7 @@ child_process = require('child_process')
 util = require('util')
 
 events = require('events')
+const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
 
 Mpeg1Muxer = function(options) {
   var key
@@ -31,7 +32,7 @@ Mpeg1Muxer = function(options) {
     ...this.additionalFlags,
     '-'
   ]
-  this.stream = child_process.spawn("ffmpeg", this.spawnOptions, {
+  this.stream = child_process.spawn(ffmpegPath, this.spawnOptions, {
     detached: false
   })
   this.inputStreamStarted = true
