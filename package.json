@@ -18,6 +18,6 @@
   },
   "dependencies": {
     "ws": "^7.0.0",
-    "@ffmpeg-installer/ffmpeg": "^1.0.20"
+    "@ffmpeg-installer/ffmpeg": "github:dbweb-ch/node-ffmpeg-installer#master"
   }
 }
